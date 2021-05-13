@@ -40,7 +40,13 @@
                             <constraint firstItem="nL0-5r-il8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v0F-AW-7Q5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Sev-Cm-edG"/>
+                    <navigationItem key="navigationItem" id="Sev-Cm-edG">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="vzQ-Bb-Kub">
+                            <connections>
+                                <action selector="didTapAdd" destination="BYZ-38-t0r" id="uVe-gT-wQz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nL0-5r-il8" id="OcB-z7-304"/>
                     </connections>
@@ -49,10 +55,43 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Entry View Controller-->
+        <scene sceneID="YNL-VY-XC5">
+            <objects>
+                <viewController storyboardIdentifier="entry" id="I3e-n9-bUp" customClass="EntryViewController" customModule="iOS_Tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Vl-EH-iME">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25W-Br-cZI">
+                                <rect key="frame" x="20" y="64" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="SG8-Fr-B2u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="suV-Jq-r4u"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="25W-Br-cZI" firstAttribute="top" secondItem="suV-Jq-r4u" secondAttribute="top" constant="20" id="IBc-wG-cTP"/>
+                            <constraint firstItem="25W-Br-cZI" firstAttribute="leading" secondItem="suV-Jq-r4u" secondAttribute="leading" constant="20" id="J52-eD-med"/>
+                            <constraint firstItem="suV-Jq-r4u" firstAttribute="trailing" secondItem="25W-Br-cZI" secondAttribute="trailing" constant="20" id="djm-OZ-3el"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="25W-Br-cZI" id="f39-4t-r6K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABn-rj-ygr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="788"/>
+        </scene>
+        <!--Task View Controller-->
         <scene sceneID="NwY-f9-7ZA">
             <objects>
-                <viewController id="g78-Qa-pfL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="task" id="g78-Qa-pfL" customClass="TaskViewController" customModule="iOS_Tasks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WYl-oC-vAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
